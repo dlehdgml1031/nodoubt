@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Data, Request
+from .models import Data, Request, Feedback
 from django.utils import timezone
 
 # Create your views here.
@@ -55,5 +55,26 @@ def request_create(request):
     new_request.name = request.POST['name']
     new_request.school_number = request.POST['school_number']
     new_request.email = request.POST['email']
+    new_request.pub_date = timezone.now()
+    new_request.writer = request.user
     new_request.save()
+    return redirect('main:showmain') 
+
+def sample(request):
+    return render(request, 'main/sample.html')
+
+def letter(request):
+    return render(request, 'main/letter.html')
+
+def feedback(request):
+    return render(request, 'main/feedback.html')
+
+def feedback_create(request):
+    new_feedback = Feedback()
+    new_feedback.title = request.POST['title']
+    new_feedback.writer = request.user
+    new_feedback.content = request.POST['content']
+    new_feedback.image = request.FILES.get('image')
+    new_feedback.email = request.POST['email']
+    new_feedback.save()
     return redirect('main:showmain') 

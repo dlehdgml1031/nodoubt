@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/version1.css' %}" media="screen and (min-width:1235px)"/>
+    <link rel="stylesheet" href="{% static 'css/version1.css' %}" media="screen and (min-width:1398px)"/>
+    <link rel="stylesheet" href="{% static 'css/version2.css' %}" media="screen and (min-width:1024px) and (max-width:1397px)"/>
+    <link rel="stylesheet" href="{% static 'css/version3.css' %}" media="screen and (min-width:768px) and (max-width:1023px)"/>
+    <link rel="stylesheet" href="{% static 'css/version4.css' %}" media="screen and (min-width:601px) and (max-width:767px)"/>
+    <link rel="stylesheet" href="{% static 'css/version5.css' %}" media="screen and (min-width:425px) and (max-width:600px)"/>
+    <link rel="stylesheet" href="{% static 'css/version6.css' %}" media="screen and (min-width:375px) and (max-width:424px)"/>
+    <link rel="stylesheet" href="{% static 'css/version7.css' %}" media="screen and (max-width:374px)"/>
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="{% static 'js/app.js' %}"></script>
     <title>NODOUBT 3BROS</title>
 </head>
 <body>
@@ -23,5 +30,10 @@
     {% endblock %}
     <!--footer-->
     {% include 'shared/footer.html' %}
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/clock.js' %}"></script>
+    <script src="{% static 'js/todo.js' %}"></script>
+    <script src="{% static 'js/request.js' %}"></script>
+    <script src="{% static 'js/dropdown.js' %}"></script>
 </body>
 </html>
